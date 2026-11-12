@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abinayaa S - Resume</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8e5d9;
+    color: #203f56;
+    padding: 20px;
+}
+
+.resume {
+    max-width: 1000px;
+    min-height: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 32% 68%;
+    background: #f8f6eb;
+    box-shadow: 0 4px 20px #aaa;
+}
+
+/* SIDEBAR */
+.sidebar {
+    padding: 35px 30px;
+    background: #f0eee3;
+}
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-photo img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    background: white;
+    border: 4px solid #795646;
+    box-shadow: 0 4px 12px #aaa;
+}
+
+/* SECTIONS */
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    background: #694635;
+    color: white;
+    padding: 10px 14px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    border-bottom: 1px solid #c4c0b5;
+    padding-bottom: 16px;
+    margin-bottom: 15px;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+h3 {
+    font-size: 17px;
+    color: #171717;
+    margin-bottom: 5px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li::before {
+    content: "•";
+    color: #694635;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+/* SKILLS */
+.skill-list li::before {
+    content: "✓";
+    display: inline-flex;
+    width: 23px;
+    height: 23px;
+    background: #694635;
+    color: white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+/* CAREER OBJECTIVE */
+.objective p {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* HEADER */
+.header {
+    background: #795646;
+    color: white;
+    padding: 45px 55px 20px;
+}
+
+.header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* RIGHT CONTENT */
+.content {
+    padding: 35px;
+}
+
+.content-section {
+    margin-bottom: 38px;
+}
+
+.content-section h2 {
+    color: #452b21;
+    font-size: 29px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #a69b8f;
+    padding-bottom: 10px;
+}
+
+/* PROJECTS */
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    color: #203f56;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.project ul {
+    padding-left: 25px;
+    list-style: disc;
+}
+
+.project li {
+    padding-left: 3px;
+    margin-bottom: 8px;
+}
+
+/* CERTIFICATIONS */
+.certifications ul {
+    padding-left: 25px;
+    list-style: disc;
+}
+
+.certifications li {
+    margin-bottom: 8px;
+}
+
+/* INTERESTS */
+.interests ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+    padding-left: 25px;
+    list-style: disc;
+}
+
+/* CONTACT */
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-icon {
+    color: #694635;
+    width: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact-item p {
+    overflow-wrap: anywhere;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+    body {
+        padding: 0;
+    }
+
+    .resume {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .header {
+        padding: 30px 25px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .sidebar, .content {
+        padding: 25px;
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+    }
+}
+
+/* A4 SINGLE PAGE PRINT SETTINGS */
+
+@page {
+    size: A4 portrait;
+    margin: 6mm;
+}
+
+@media print {
+
+    * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .resume {
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        height: auto;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 32% 68%;
+        box-shadow: none;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    .content {
+        padding: 14px;
+    }
+
+    .profile-photo img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .header {
+        padding: 22px 20px 12px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .section {
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 15px;
+        padding: 6px 8px;
+        margin-bottom: 9px;
+    }
+
+    .content-section {
+        margin-bottom: 18px;
+    }
+
+    .content-section h2 {
+        font-size: 19px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    h3, .project h3 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    p, li {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .objective p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .education-item {
+        padding-bottom: 7px;
+        margin-bottom: 7px;
+    }
+
+    .project {
+        margin-bottom: 14px;
+    }
+
+    .project li {
+        margin-bottom: 4px;
+    }
+
+    .contact-item {
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+
+    .contact-icon {
+        font-size: 13px;
+    }
+
+    .interests ul {
+        gap: 3px 8px;
+    }
+
+@page {
+    size: A4 portrait;
+    margin: 5mm;
+}
+
+@media print {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .resume {
+        width: 200mm;
+        height: 287mm;
+        margin: 0 auto;
+        overflow: hidden;
+        box-shadow: none;
+        page-break-after: avoid;
+        transform: scale(0.95);
+        transform-origin: top center;
+    }
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="resume">
+
+<!-- LEFT SIDEBAR -->
+<aside class="sidebar">
+
+    <!-- PROFILE PHOTO -->
+    <div class="profile-photo">
+        <img src="abhi resume.png" alt="Abinayaa Profile Photo">
+    </div>
+
+    <!-- CAREER OBJECTIVE -->
+    <section class="section objective">
+        <h2 class="section-title">CAREER OBJECTIVE</h2>
+
+        <p>
+            To build a successful career in the IT industry by applying
+            my technical knowledge, problem-solving abilities and
+            communication skills. I am eager to learn new technologies,
+            improve my skills and contribute to organizational growth.
+        </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+        <h2 class="section-title">EDUCATION</h2>
+
+        <div class="education-item">
+            <h3>B.Tech in Information Technology</h3>
+            <p>Velalar College of Engineering and Technology, Erode</p>
+            <p>2024 – 2028</p>
+            <p>CGPA : 8.1 / 10</p>
+        </div>
+
+        <div class="education-item">
+            <h3>Higher Secondary (HSC)</h3>
+            <p>Malco Vidyalaya Matric Higher Secondary school,Mettur</p>
+            <p>2024 | Percentage : 7.6 / 100</p>
+        </div>
+
+        <div class="education-item">
+            <h3>Secondary School (SSLC)</h3>
+            <p>Malco Vidyalaya Matric Higher Secondary School, Mettur</p>
+            <p>2022 | Percentage : 7.8 / 100</p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+        <h2 class="section-title">SKILLS</h2>
+
+        <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>MongoDB</li>
+            <li>Communication</li>
+            <li>Teamwork</li>
+        </ul>
+    </section>
+
+</aside>
+
+<!-- RIGHT CONTENT -->
+<main>
+
+    <!-- NAME HEADER -->
+    <header class="header">
+        <h1>ABINAYAA S</h1>
+        <p>B.TECH – INFORMATION TECHNOLOGY</p>
+    </header>
+
+    <div class="content">
+
+        <!-- PROJECTS -->
+        <section class="content-section">
+            <h2>● PROJECTS</h2>
+
+            <div class="project">
+                <h3>1. Driver Drowsiness Detection, Sleep Alerts &amp; Vehicle Control</h3>
+
+                <ul>
+                    <li>Built a system to detect driver drowsiness using eye state (eye open/close) and yawning detection.</li>
+
+                    <li>Implemented real-time alerts (buzzer) and automatic vehicle control (speed reduction/stop) when drowsiness is detected.</li>
+
+                    <li>Used OpenCV, dlib (or Haar Cascades), and Python.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>2. Weather Prediction</h3>
+
+                <ul>
+                    <li>Built a machine learning model to predict weather conditions using historical weather data.</li>
+
+                    <li>Implemented data preprocessing, feature selection and model training using Python (scikit-learn).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="content-section certifications">
+            <h2>● CERTIFICATIONS</h2>
+
+            <ul>
+                <li>MongoDB Certification</li>
+                <li>NPTEL Courses</li>
+                <li>Workshop Participation</li>
+            </ul>
+        </section>
+
+        <!-- INTERESTS -->
+        <section class="content-section interests">
+            <h2>● INTERESTS</h2>
+
+            <ul>
+                <li>Web Development</li>
+                <li>Problem Solving</li>
+                <li>Tech &amp; Innovation</li>
+                <li>Travel &amp; Exploration</li>
+                <li>Reading &amp; Movies</li>
+                <li>Music</li>
+            </ul>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="content-section">
+            <h2>● CONTACT</h2>
+
+            <div class="contact-item">
+                <span class="contact-icon">☎</span>
+                <p>+91 9876543210</p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">✉</span>
+                <p>abinayaas204@gmail.com</p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">●</span>
+                <p>Mettur, Tamil Nadu</p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">in</span>
+                <p>linkedin.com/in/abinayaa-s</p>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">◉</span>
+                <p>github.com/abinayaa-s</p>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+</div>
+
+</body>
+</html>
